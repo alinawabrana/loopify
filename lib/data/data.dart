@@ -1,6 +1,7 @@
 import 'package:loopify/featutres/shop/models/category_model.dart';
 import 'package:loopify/featutres/shop/models/promoted_items_model.dart';
 
+const List<CategoryModel> categories = [
   CategoryModel(
     label: "Free Items",
     imageURL: "assets/images/categories/category_image_1.png",
