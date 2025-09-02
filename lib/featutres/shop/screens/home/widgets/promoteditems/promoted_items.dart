@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:loopify/featutres/shop/models/promoted_items_model.dart';
+import 'package:loopify/utils/helper/helpers.dart';
 
 class PromotedItems extends StatefulWidget {
   const PromotedItems({super.key, required this.promotedItem});
@@ -40,7 +41,7 @@ class _PromotedItemsState extends State<PromotedItems> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'USD ${widget.promotedItem.price}',
+                  'USD ${AHelper.formattedPrice(widget.promotedItem.price)}',
                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
                 ),
                 GestureDetector(
