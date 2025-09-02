@@ -12,7 +12,14 @@ class BannerImageWithText extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Image(image: AssetImage('assets/images/banner_1.png')),
+            Center(
+              child: Image(
+                image: AssetImage('assets/images/banner_1.png'),
+                width: double.infinity,
+                fit: BoxFit.fitWidth,
+                // fit: BoxFit.contain,
+              ),
+            ),
             Positioned(
               top: 64,
               left: 30,

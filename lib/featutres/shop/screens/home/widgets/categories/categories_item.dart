@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:loopify/featutres/shop/models/category_model.dart';
 
 class CategoriesItem extends StatelessWidget {
-  const CategoriesItem({
-    super.key,
-    required this.categoryImage,
-    required this.categoryLabel,
-  });
+  const CategoriesItem({super.key, required this.category});
 
-  final String categoryImage;
-  final String categoryLabel;
+  final CategoryModel category;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +20,10 @@ class CategoriesItem extends StatelessWidget {
             color: Color(0xFFF3F4F6),
             shape: BoxShape.circle,
           ),
-          child: Image.asset(categoryImage),
+          child: Image.asset(category.imageURL),
         ),
         Text(
-          categoryLabel,
+          category.label,
           style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 14,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:loopify/screens/home/widgets/promoteditems/promoted_items.dart';
+import 'package:loopify/featutres/shop/screens/home/widgets/promoteditems/promoted_items.dart';
 
-import '../../../../data/data.dart';
-import '../../../../utils/common/widgets/text_tile.dart';
+import '../../../../../../data/data.dart';
+import '../../../../../../utils/common/widgets/text_tile.dart';
 
 class PromotedItemsGrid extends StatelessWidget {
   const PromotedItemsGrid({super.key});
@@ -19,7 +19,7 @@ class PromotedItemsGrid extends StatelessWidget {
           GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisExtent: 270,
+              mainAxisExtent: 250,
               crossAxisSpacing: 16,
               mainAxisSpacing: 24,
             ),
@@ -27,12 +27,8 @@ class PromotedItemsGrid extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             itemCount: promotedItems.length,
             itemBuilder: (context, index) {
-              final (title, price, image) = promotedItems[index];
-              return PromotedItems(
-                promotedItemTitle: title,
-                promotedItemsPrice: price,
-                promotedItemImage: image,
-              );
+              final promotedItem = promotedItems[index];
+              return PromotedItems(promotedItem: promotedItem);
             },
           ),
         ],

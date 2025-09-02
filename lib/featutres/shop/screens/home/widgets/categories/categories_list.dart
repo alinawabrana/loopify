@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../data/data.dart';
-import '../../../../utils/common/widgets/text_tile.dart';
+import '../../../../../../data/data.dart';
+import '../../../../../../utils/common/widgets/text_tile.dart';
 import 'categories_item.dart';
 
 class CategoriesList extends StatelessWidget {
@@ -22,11 +22,8 @@ class CategoriesList extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: categories.length,
               itemBuilder: (context, index) {
-                final (categoryLabel, categoryImage) = categories[index];
-                return CategoriesItem(
-                  categoryLabel: categoryLabel,
-                  categoryImage: categoryImage,
-                );
+                final category = categories[index];
+                return CategoriesItem(category: category);
               },
               separatorBuilder: (_, _) => SizedBox(width: 12),
             ),
