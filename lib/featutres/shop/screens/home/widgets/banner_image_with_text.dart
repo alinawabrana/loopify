@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loopify/utils/constants/image_strings.dart';
 
 class BannerImageWithText extends StatelessWidget {
   const BannerImageWithText({super.key});
@@ -14,7 +15,7 @@ class BannerImageWithText extends StatelessWidget {
           children: [
             Center(
               child: Image(
-                image: AssetImage('assets/images/banner_1.png'),
+                image: AssetImage(AImages.bannerImage1),
                 width: double.infinity,
                 fit: BoxFit.fitWidth,
                 // fit: BoxFit.contain,

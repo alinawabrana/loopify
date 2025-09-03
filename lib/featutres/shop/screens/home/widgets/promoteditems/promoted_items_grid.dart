@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:loopify/featutres/shop/screens/home/widgets/promoteditems/promoted_items.dart';
 
@@ -19,10 +21,11 @@ class PromotedItemsGrid extends StatelessWidget {
           GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisExtent: 250,
+              mainAxisExtent: Platform.isIOS ? 270 : 250,
               crossAxisSpacing: 16,
               mainAxisSpacing: 24,
             ),
+            padding: EdgeInsets.all(0),
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemCount: promotedItems.length,

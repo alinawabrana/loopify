@@ -8,29 +8,31 @@ class CategoriesItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      spacing: 8,
-      children: [
-        Container(
-          width: 72,
-          height: 72,
-          padding: const EdgeInsets.all(10.0),
-          decoration: BoxDecoration(
-            color: Color(0xFFF3F4F6),
-            shape: BoxShape.circle,
+    return GestureDetector(
+      onTap: () {},
+      child: Column(
+        spacing: 8,
+        children: [
+          Container(
+            width: 72,
+            height: 72,
+            padding: const EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              color: Color(0xFFF3F4F6),
+              shape: BoxShape.circle,
+            ),
+            child: Image.asset(category.imageURL),
           ),
-          child: Image.asset(category.imageURL),
-        ),
-        Text(
-          category.label,
-          style: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 14,
-            color: Color(0xFF374151),
+          Text(
+            category.label,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
+              color: Color(0xFF374151),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
