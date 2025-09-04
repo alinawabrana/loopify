@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:loopify/utils/common/widgets/icons/primary_icon.dart';
+import 'package:loopify/utils/constants/colors.dart';
 import 'package:loopify/utils/constants/svg_image_strings.dart';
 
 class CustomSearchField extends StatefulWidget {
@@ -25,20 +27,14 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
           fillColor: Color(0xFFF3F4F6),
           contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 14),
           hintText: 'Explore to next purchase.',
-          hintStyle: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 14,
-            color: Color(0xFFD1D5DB),
-          ),
+          hintStyle: Theme.of(
+            context,
+          ).textTheme.bodyMedium!.apply(color: AColors.searchLabelTextColor),
           prefixIcon: Padding(
             padding: const EdgeInsets.only(left: 12.0, right: 5),
             child: SvgPicture.asset(ASvgImages.searchIcon),
           ),
-          suffixIcon: Icon(
-            Iconsax.setting_44,
-            size: 20,
-            color: Color(0xFF6B7280),
-          ),
+          suffixIcon: PrimaryIcon(icon: Iconsax.setting_44),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4),
             borderSide: BorderSide(color: Colors.transparent),

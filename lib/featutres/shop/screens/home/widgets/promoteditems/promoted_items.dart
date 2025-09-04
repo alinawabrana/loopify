@@ -35,12 +35,7 @@ class _PromotedItemsState extends State<PromotedItems> {
             ),
             Text(
               widget.promotedItem.title,
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-                color: Color(0xFF4B5563),
-                letterSpacing: 0,
-              ),
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(
               width: 167,
@@ -49,7 +44,9 @@ class _PromotedItemsState extends State<PromotedItems> {
                 children: [
                   Text(
                     'USD ${AHelper.formattedPrice(widget.promotedItem.price)}',
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
+                    style: Theme.of(
+                      context,
+                    ).textTheme.titleLarge!.copyWith(color: Colors.black),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -59,6 +56,7 @@ class _PromotedItemsState extends State<PromotedItems> {
                     child: Icon(
                       isFavorite ? Iconsax.heart5 : Iconsax.heart,
                       color: Color(0XFF32B780),
+                      size: 20,
                     ),
                   ),
                 ],

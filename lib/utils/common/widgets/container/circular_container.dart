@@ -50,8 +50,7 @@ class CircularContainer extends StatelessWidget {
               ? DecorationImage(image: backgroundImage!, fit: BoxFit.contain)
               : null,
         ),
-        padding: EdgeInsets.all(8),
-        child: child,
+        child: Center(child: child),
       ),
     );
   }

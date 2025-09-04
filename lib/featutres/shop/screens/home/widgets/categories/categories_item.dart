@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loopify/featutres/shop/models/category_model.dart';
+import 'package:loopify/utils/constants/colors.dart';
 
 class CategoriesItem extends StatelessWidget {
   const CategoriesItem({super.key, required this.category});
@@ -18,17 +19,15 @@ class CategoriesItem extends StatelessWidget {
             height: 72,
             padding: const EdgeInsets.all(10.0),
             decoration: BoxDecoration(
-              color: Color(0xFFF3F4F6),
+              color: AColors.primaryBackgroundColor,
               shape: BoxShape.circle,
             ),
             child: Image.asset(category.imageURL),
           ),
           Text(
             category.label,
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14,
-              color: Color(0xFF374151),
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              color: AColors.primaryTextDarkColor,
             ),
           ),
         ],

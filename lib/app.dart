@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:loopify/navigation_dashboard.dart';
 import 'package:loopify/utils/theme/theme.dart';
 
-import 'featutres/shop/screens/home/home_screen.dart';
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

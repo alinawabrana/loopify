@@ -14,5 +14,6 @@ class ATheme {
     textButtonTheme: ATextButtonTheme.lightTextButtonTheme,
     bottomAppBarTheme: ABottomAppBarTheme.lightBottomAppBarTheme,
     textTheme: ATextTheme.lightTextTheme,
+    brightness: Brightness.light,
   );
 }

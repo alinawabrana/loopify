@@ -39,14 +39,7 @@ class ProductDetailRow extends StatelessWidget {
                     ),
                   )
                 : SizedBox.shrink(),
-            Text(
-              detail,
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
-                height: 1.2,
-              ),
-            ),
+            Text(detail, style: Theme.of(context).textTheme.bodyLarge),
           ],
         ),
       ],

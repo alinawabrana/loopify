@@ -50,13 +50,6 @@ final List<String> productImages = [
   AImages.productImage1,
   AImages.productImage2,
   AImages.productImage3,
-  AImages.productImage3,
-];
-
-final List<String> carouselProductImages = [
-  AImages.carouselProductImage1,
-  AImages.carouselProductImage1,
-  AImages.carouselProductImage1,
-  AImages.carouselProductImage1,
-  AImages.carouselProductImage1,
+  AImages.productImage4,
+  AImages.productImage5,
 ];

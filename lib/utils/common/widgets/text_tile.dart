@@ -10,12 +10,9 @@ class TextTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(
-        fontWeight: FontWeight.w600,
-        fontSize: 20,
-        color: Color(0xFF0D111A),
-        height: lineHeight,
-      ),
+      style: Theme.of(
+        context,
+      ).textTheme.headlineMedium!.copyWith(height: lineHeight),
     );
   }
 }

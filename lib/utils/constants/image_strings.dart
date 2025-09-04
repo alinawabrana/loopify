@@ -6,12 +6,12 @@ class AImages {
   static const String bannerImage1 = 'assets/images/banner_1.png';
 
   // Products
-  static const String carouselProductImage1 =
+  static const String productImage1 =
       'assets/images/products/carousel_image.png';
-  static const String productImage1 = 'assets/images/products/image.png';
-  static const String productImage2 = 'assets/images/products/image-2.png';
-  static const String productImage3 = 'assets/images/products/image-3.png';
-  static const String productImage4 = 'assets/images/products/image-4.png';
+  static const String productImage2 = 'assets/images/products/image.png';
+  static const String productImage3 = 'assets/images/products/image-2.png';
+  static const String productImage4 = 'assets/images/products/image-3.png';
+  static const String productImage5 = 'assets/images/products/image-4.png';
 
   // Categories
   static const String categoryImage1 =

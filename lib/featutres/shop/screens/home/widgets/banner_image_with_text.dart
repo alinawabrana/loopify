@@ -7,7 +7,7 @@ class BannerImageWithText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(4),
         child: Stack(
@@ -28,9 +28,9 @@ class BannerImageWithText extends StatelessWidget {
                 text: TextSpan(
                   text: 'GET THEM ',
                   style: TextStyle(
-                    fontWeight: FontWeight.w200,
                     fontSize: 16,
-                    letterSpacing: 0.39 * 16, // 39% of font size
+                    fontWeight: FontWeight.w200,
+                    letterSpacing: 0.39 * 16,
                   ),
                   children: [
                     TextSpan(
