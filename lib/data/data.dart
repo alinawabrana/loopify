@@ -1,55 +1,163 @@
-import 'package:loopify/featutres/shop/models/category_model.dart';
-import 'package:loopify/featutres/shop/models/promoted_items_model.dart';
+import 'package:loopify/featutres/home/models/category_model.dart';
+import 'package:loopify/featutres/home/models/product/product_model.dart';
 import 'package:loopify/utils/constants/image_strings.dart';
 
 const List<CategoryModel> categories = [
-  CategoryModel(label: "Free Items", imageURL: AImages.categoryImage1),
-  CategoryModel(label: "Bags", imageURL: AImages.categoryImage2),
-  CategoryModel(label: "Designer Items", imageURL: AImages.categoryImage3),
-  CategoryModel(label: "Makeup", imageURL: AImages.categoryImage4),
-  CategoryModel(label: "Free Items", imageURL: AImages.categoryImage1),
-  CategoryModel(label: "Bags", imageURL: AImages.categoryImage2),
-  CategoryModel(label: "Designer Items", imageURL: AImages.categoryImage3),
-  CategoryModel(label: "Makeup", imageURL: AImages.categoryImage4),
+  CategoryModel(id: 1, label: "Free Items", imageURL: AImages.categoryImage1),
+  CategoryModel(id: 2, label: "Bags", imageURL: AImages.categoryImage2),
+  CategoryModel(
+    id: 3,
+    label: "Designer Items",
+    imageURL: AImages.categoryImage3,
+  ),
+  CategoryModel(id: 4, label: "Makeup", imageURL: AImages.categoryImage4),
+  CategoryModel(id: 1, label: "Free Items", imageURL: AImages.categoryImage1),
+  CategoryModel(id: 2, label: "Bags", imageURL: AImages.categoryImage2),
+  CategoryModel(
+    id: 3,
+    label: "Designer Items",
+    imageURL: AImages.categoryImage3,
+  ),
+  CategoryModel(id: 4, label: "Makeup", imageURL: AImages.categoryImage4),
 ];
 
-const List<PromotedItemsModel> promotedItems = [
-  PromotedItemsModel(
-    title: '24K Gold Elegantly crafted with lustrous pearls',
+const List<ProductModel> promotedItems = [
+  ProductModel(
+    id: 1,
+    title: 'Luxurious Gucci Laptop Bag Embellished with Stunning Pearls',
     price: 920,
-    imageURL: AImages.promotedImage1,
+    isNegotiable: true,
+    description:
+        'Elevate your style with this luxurious Gucci laptop bag, beautifully adorned with exquisite pearls and elegant gold accents. Perfect for the modern professional, this bag combines functionality with high fashion, ensuring your laptop is both secure and stylish.',
+    categoryId: 1,
+    condition: 'Excellent',
+    location: 'New York',
+    material: 'Leather',
+    color: 'Brown',
+    sellerNote:
+        'Thank you for considering our luxurious Gucci laptop bag! This stunning piece is adorned with exquisite pearls and elegant gold accents, making it the perfect accessory for the modern professional.',
+    imageURLs: [
+      AImages.promotedImage1,
+      AImages.productImage2,
+      AImages.productImage3,
+      AImages.productImage4,
+      AImages.productImage5,
+    ],
+    isAdSpendEnabled: false,
   ),
-  PromotedItemsModel(
+  ProductModel(
+    id: 2,
     title: '24K Gold Elegantly crafted with lustrous pearls',
     price: 780,
-    imageURL: AImages.promotedImage2,
+    isNegotiable: true,
+    description:
+        'Elevate your style with this luxurious Gucci laptop bag, beautifully adorned with exquisite pearls and elegant gold accents. Perfect for the modern professional, this bag combines functionality with high fashion, ensuring your laptop is both secure and stylish.',
+    categoryId: 1,
+    condition: 'Excellent',
+    location: 'New York',
+    material: 'Leather',
+    color: 'Brown',
+    sellerNote:
+        'Thank you for considering our luxurious Gucci laptop bag! This stunning piece is adorned with exquisite pearls and elegant gold accents, making it the perfect accessory for the modern professional.',
+    imageURLs: [
+      AImages.promotedImage2,
+      AImages.productImage2,
+      AImages.productImage3,
+      AImages.productImage4,
+      AImages.productImage5,
+    ],
+    isAdSpendEnabled: false,
   ),
-  PromotedItemsModel(
+  ProductModel(
+    id: 3,
     title: '24K Gold Elegantly crafted with lustrous pearls',
     price: 650,
-    imageURL: AImages.promotedImage3,
+    isNegotiable: true,
+    description:
+        'Elevate your style with this luxurious Gucci laptop bag, beautifully adorned with exquisite pearls and elegant gold accents. Perfect for the modern professional, this bag combines functionality with high fashion, ensuring your laptop is both secure and stylish.',
+    categoryId: 1,
+    condition: 'Excellent',
+    location: 'New York',
+    material: 'Leather',
+    color: 'Brown',
+    sellerNote:
+        'Thank you for considering our luxurious Gucci laptop bag! This stunning piece is adorned with exquisite pearls and elegant gold accents, making it the perfect accessory for the modern professional.',
+    imageURLs: [
+      AImages.promotedImage3,
+      AImages.productImage2,
+      AImages.productImage3,
+      AImages.productImage4,
+      AImages.productImage5,
+    ],
+    isAdSpendEnabled: false,
   ),
-  PromotedItemsModel(
+  ProductModel(
+    id: 4,
     title: '24K Gold Elegantly crafted with lustrous pearls',
     price: 1050,
-    imageURL: AImages.promotedImage4,
+    isNegotiable: true,
+    description:
+        'Elevate your style with this luxurious Gucci laptop bag, beautifully adorned with exquisite pearls and elegant gold accents. Perfect for the modern professional, this bag combines functionality with high fashion, ensuring your laptop is both secure and stylish.',
+    categoryId: 1,
+    condition: 'Excellent',
+    location: 'New York',
+    material: 'Leather',
+    color: 'Brown',
+    sellerNote:
+        'Thank you for considering our luxurious Gucci laptop bag! This stunning piece is adorned with exquisite pearls and elegant gold accents, making it the perfect accessory for the modern professional.',
+    imageURLs: [
+      AImages.promotedImage4,
+      AImages.productImage2,
+      AImages.productImage3,
+      AImages.productImage4,
+      AImages.productImage5,
+    ],
+    isAdSpendEnabled: false,
   ),
-  PromotedItemsModel(
+  ProductModel(
+    id: 5,
     title: '24K Gold Elegantly crafted with lustrous pearls',
     price: 1200,
-    imageURL: AImages.promotedImage5,
+    isNegotiable: true,
+    description:
+        'Elevate your style with this luxurious Gucci laptop bag, beautifully adorned with exquisite pearls and elegant gold accents. Perfect for the modern professional, this bag combines functionality with high fashion, ensuring your laptop is both secure and stylish.',
+    categoryId: 1,
+    condition: 'Excellent',
+    location: 'New York',
+    material: 'Leather',
+    color: 'Brown',
+    sellerNote:
+        'Thank you for considering our luxurious Gucci laptop bag! This stunning piece is adorned with exquisite pearls and elegant gold accents, making it the perfect accessory for the modern professional.',
+    imageURLs: [
+      AImages.promotedImage5,
+      AImages.productImage2,
+      AImages.productImage3,
+      AImages.productImage4,
+      AImages.productImage5,
+    ],
+    isAdSpendEnabled: false,
   ),
-  PromotedItemsModel(
+  ProductModel(
+    id: 6,
     title: '24K Gold Elegantly crafted with lustrous pearls',
     price: 430,
-    imageURL: AImages.promotedImage6,
+    isNegotiable: true,
+    description:
+        'Elevate your style with this luxurious Gucci laptop bag, beautifully adorned with exquisite pearls and elegant gold accents. Perfect for the modern professional, this bag combines functionality with high fashion, ensuring your laptop is both secure and stylish.',
+    categoryId: 1,
+    condition: 'Excellent',
+    location: 'New York',
+    material: 'Leather',
+    color: 'Brown',
+    sellerNote:
+        'Thank you for considering our luxurious Gucci laptop bag! This stunning piece is adorned with exquisite pearls and elegant gold accents, making it the perfect accessory for the modern professional.',
+    imageURLs: [
+      AImages.promotedImage6,
+      AImages.productImage2,
+      AImages.productImage3,
+      AImages.productImage4,
+      AImages.productImage5,
+    ],
+    isAdSpendEnabled: false,
   ),
-];
-
-final List<String> productImages = [
-  AImages.productImage1,
-  AImages.productImage2,
-  AImages.productImage3,
-  AImages.productImage4,
-  AImages.productImage5,
 ];

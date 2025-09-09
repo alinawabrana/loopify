@@ -41,4 +41,7 @@ class AImages {
 
   // Seller
   static const String sellerImage1 = 'assets/images/seller.png';
+
+  // Icons
+  static const String cancelIconImage = 'assets/icons/cancel_icon.png';
 }

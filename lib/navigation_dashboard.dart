@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:loopify/featutres/shop/screens/home/home_screen.dart';
+import 'package:loopify/featutres/home/screens/add_product/add_update_product_screen.dart';
 import 'package:loopify/utils/common/widgets/container/circular_container.dart';
 import 'package:loopify/utils/common/widgets/icons/primary_icon.dart';
 import 'package:loopify/utils/constants/colors.dart';
 import 'package:loopify/utils/constants/svg_image_strings.dart';
+
+import 'featutres/category/screens/category_screen.dart';
+import 'featutres/home/screens/home/home_screen.dart';
 
 class NavigationDashboard extends StatefulWidget {
   const NavigationDashboard({super.key});
@@ -15,14 +18,8 @@ class NavigationDashboard extends StatefulWidget {
 }
 
 class _NavigationDashboardState extends State<NavigationDashboard> {
-  final List<Widget> navigationWidgets = [
-    HomeScreen(),
-    Container(color: Colors.redAccent),
-    Container(color: Colors.yellowAccent),
-    Container(color: Colors.greenAccent),
-  ];
-
   late int index = 0;
+  bool refreshHome = false;
 
   void navigateTo(int newIndex) {
     index = newIndex;
@@ -31,10 +28,28 @@ class _NavigationDashboardState extends State<NavigationDashboard> {
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> navigationWidgets = [
+      HomeScreen(),
+      CategoryScreen(),
+      Container(color: Colors.yellowAccent),
+      Container(color: Colors.greenAccent),
+    ];
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: navigationWidgets[index],
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () =>
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AddUpdateProductScreen()),
+            ).then((value) {
+              if (value == true) {
+                setState(() {
+                  refreshHome =
+                      !refreshHome; // toggle key so HomeScreen rebuilds
+                });
+              }
+            }),
         elevation: 0,
         shape: CircleBorder(),
         backgroundColor: AColors.primaryBackgroundColor,
